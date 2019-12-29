@@ -15,6 +15,8 @@ class CreatePosts
 
         t.column :tsv, "tsvector"
 
+        t.index :tsv, using: :gin
+
         t.references to: "authors", name: "author_id", on_delete: "cascade", null: false, primary: true
 
         t.timestamps
@@ -32,10 +34,6 @@ class CreatePosts
 
         t.index ["tag_id", "post_id"], using: :btree
       end
-
-      execute <<-SQL
-        CREATE INDEX posts_tsv_idx ON posts USING GIN (tsv);
-      SQL
 
       #
       # Creates function triggers
