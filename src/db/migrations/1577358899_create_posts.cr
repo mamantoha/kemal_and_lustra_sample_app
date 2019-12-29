@@ -33,6 +33,10 @@ class CreatePosts
         t.index ["tag_id", "post_id"], using: :btree
       end
 
+      execute <<-SQL
+        CREATE INDEX posts_tsv_idx ON posts USING GIN (tsv);
+      SQL
+
       #
       # Creates function triggers
       #
