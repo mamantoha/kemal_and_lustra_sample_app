@@ -1,0 +1,26 @@
+name: kemal_and_clear_sample_app
+version: 0.1.0
+
+authors:
+  - Anton Maminov <anton.linux@gmail.com>
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  clear:
+    github: anykeyh/clear
+    branch: master
+  slang:
+    github: jeromegn/slang
+    branch: master
+
+targets:
+  app:
+    main: src/app.cr
+  db_cli:
+    main: src/db_cli.cr
+
+
+crystal: 0.33.0-dev
+
+license: MIT

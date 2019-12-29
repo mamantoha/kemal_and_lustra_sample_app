@@ -1,0 +1,58 @@
+version: 1.0
+shards:
+  admiral:
+    github: jwaldrip/admiral.cr
+    commit: d11fc4863154f3dbd933421bdf45d356a2550e07
+
+  clear:
+    github: anykeyh/clear
+    commit: 2a503f813c84c95a89ed52e54ea159a4045b8247
+
+  db:
+    github: crystal-lang/crystal-db
+    version: 0.8.0
+
+  exception_page:
+    github: crystal-loot/exception_page
+    version: 0.1.2
+
+  generate:
+    github: anykeyh/generate.cr
+    commit: 27a59d663ded8ce39a361e3a88b8dd747f59ce42
+
+  inflector:
+    github: phoffer/inflector.cr
+    version: 0.1.8
+
+  kemal:
+    github: kemalcr/kemal
+    version: 0.26.1
+
+  kilt:
+    github: jeromegn/kilt
+    version: 0.4.0
+
+  mosquito:
+    github: robacarp/mosquito
+    version: 0.6.0
+
+  pg:
+    github: will/crystal-pg
+    commit: cafebf8ae9477e7e50bd3e1281d66d8a519d645f
+
+  pool:
+    github: ysbaddaden/pool
+    version: 0.2.3
+
+  radix:
+    github: luislavena/radix
+    version: 0.3.9
+
+  redis:
+    github: stefanwille/crystal-redis
+    version: 2.5.2
+
+  slang:
+    github: jeromegn/slang
+    commit: 8210d3f83c6199bc59925ee964405ffe926f44f3
+
