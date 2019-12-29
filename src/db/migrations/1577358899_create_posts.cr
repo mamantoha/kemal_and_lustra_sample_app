@@ -85,6 +85,7 @@ class CreatePosts
     end
 
     direction.down do
+      execute("DROP TABLE authors")
       execute("DROP TABLE posts")
       execute("DROP TABLE tags")
       execute("DROP TABLE post_tags")
