@@ -4,6 +4,8 @@ It's an example of traditional blog-like application with `post` objects, which 
 A `post` is associated to an `author` via a foreign key.
 A `post` itself can have multiple tags.
 
+![database structure](https://raw.githubusercontent.com/mamantoha/kemal_and_clear_sample_app/master/db.png)
+
 ## Development
 
 ```bash
