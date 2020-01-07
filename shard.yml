@@ -8,8 +8,9 @@ dependencies:
   kemal:
     github: kemalcr/kemal
   clear:
-    github: anykeyh/clear
-    branch: master
+    path: ../clear
+    # github: anykeyh/clear
+    # branch: master
   slang:
     github: jeromegn/slang
     branch: master

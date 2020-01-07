@@ -13,6 +13,24 @@ class Post
   belongs_to author : Author
   has_many tags : Tag, through: PostTag
 
+  def tags=(names : Array(String))
+    names.map do |name|
+      tag = Tag.query.find_or_create({name: name}) { }
+      self.tags << tag
+    end
+
+    unlink_tags = tag_names - names
+    unlink_tags.each do |name|
+      if tag = Tag.query.find!({name: name})
+        self.tags.unlink(tag)
+      end
+    end
+  end
+
+  def tag_names
+    self.tags.map(&.name)
+  end
+
   def touch
     now = Time.local
 
