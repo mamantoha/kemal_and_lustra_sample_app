@@ -13,6 +13,7 @@ get "/" do |env|
     end
 
   tags = Tag.query
+  authors = Author.query
 
   render "src/views/index.slang"
 end

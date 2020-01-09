@@ -22,6 +22,19 @@ table
         td= post.dependencies.map(&.title).join(", ")
         td= post.dependents.map(&.title).join(", ")
 
+h2 #{authors.count} authors
+
+table
+  thead
+    tr
+      td Name
+      td Posts
+  tbody
+    - authors.each do |author|
+      tr
+        td= author.name
+        td= author.posts.map(&.title).join(", ")
+
 h2 #{tags.count} tags
 
 table
