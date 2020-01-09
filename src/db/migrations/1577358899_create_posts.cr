@@ -35,6 +35,13 @@ class CreatePosts
         t.index ["tag_id", "post_id"], using: :btree
       end
 
+      create_table(:relationships, id: false) do |t|
+        t.references to: "posts", name: "leader_id", on_delete: "cascade", null: false, primary: true
+        t.references to: "posts", name: "follower_id", on_delete: "cascade", null: false, primary: true
+
+        t.index ["leader_id", "follower_id"], using: :btree
+      end
+
       #
       # Creates function triggers
       #

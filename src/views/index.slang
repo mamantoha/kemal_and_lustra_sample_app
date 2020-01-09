@@ -7,6 +7,8 @@ table
       td Content
       td Author
       td Tags
+      td Dependencies
+      td Used by
   tbody
     - posts.each do |post|
       tr
@@ -14,3 +16,5 @@ table
         td= post.content
         td= post.author.name
         td= post.tags.map(&.name).join(", ")
+        td= post.dependencies.map(&.title).join(", ")
+        td= post.dependents.map(&.title).join(", ")
