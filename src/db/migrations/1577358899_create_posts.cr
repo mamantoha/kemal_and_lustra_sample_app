@@ -98,6 +98,7 @@ class CreatePosts
       execute("DROP TABLE posts")
       execute("DROP TABLE tags")
       execute("DROP TABLE post_tags")
+      execute("DROP TABLE relationships")
       execute("DROP FUNCTION tsv_trigger_insert_posts()")
       execute("DROP FUNCTION tsv_trigger_update_posts()")
       execute("DROP TRIGGER tsv_update_posts}")
