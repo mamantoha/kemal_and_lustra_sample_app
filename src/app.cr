@@ -12,6 +12,8 @@ get "/" do |env|
       Post.query.with_tags.with_author
     end
 
+  tags = Tag.query
+
   render "src/views/index.slang"
 end
 

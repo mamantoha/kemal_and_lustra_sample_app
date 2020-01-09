@@ -1,4 +1,7 @@
-h1 #{posts.count} posts
+h1
+  | Kemal and Clear Sample Application
+
+h2 #{posts.count} posts
 
 table
   thead
@@ -18,3 +21,16 @@ table
         td= post.tags.map(&.name).join(", ")
         td= post.dependencies.map(&.title).join(", ")
         td= post.dependents.map(&.title).join(", ")
+
+h2 #{tags.count} tags
+
+table
+  thead
+    tr
+      td Name
+      td Posts
+  tbody
+    - tags.each do |tag|
+      tr
+        td= tag.name
+        td= tag.posts.map(&.title).join(", ")
