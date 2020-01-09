@@ -7,13 +7,8 @@ Clear.seed do
   p3 = Post.create!({title: "You won't believe: She raises her poney like as star!", content: "She's col because poney are cool", author: a2})
   p4 = Post.create!({title: "Post without tags", content: "Test posts without tags", author: a2})
 
-  r1 = p1.relationships.build
-  r1.follower_id = p2.id
-  r1.save
-
-  r2 = p1.relationships.build
-  r2.follower_id = p4.id
-  r2.save
+  p1.dependencies << p2
+  p1.dependencies << p4
 
   t1 = Tag.query.find_or_create({name: "ruby"}) { }
   t2 = Tag.query.find_or_create({name: "crystal"}) { }
