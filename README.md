@@ -3,6 +3,7 @@
 It's an example of traditional blog-like application with `post` objects, which have a `title` and `content`.
 A `post` is associated to an `author` via a foreign key.
 A `post` itself can have multiple tags.
+A `post` has self-referential association to define leaders/followers.
 
 ![database structure](https://raw.githubusercontent.com/mamantoha/kemal_and_clear_sample_app/master/db.png)
 
