@@ -7,7 +7,7 @@ class AddKindToPosts
     end
 
     direction.down do
-      drop_column "posts", "kind", "text"
+      add_column "posts", "kind", "text"
     end
   end
 end
