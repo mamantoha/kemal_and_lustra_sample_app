@@ -35,15 +35,17 @@ table
         td= author.name
         td= author.posts.map(&.title).join(", ")
 
-h2 #{tags.count} tags
+h2 #{taggings.count} tags
 
 table
   thead
     tr
       td Name
       td Posts
+      td Tagged times
   tbody
-    - tags.each do |tag|
+    - taggings.each(fetch_columns: true) do |tag|
       tr
         td= tag.name
         td= tag.posts.map(&.title).join(", ")
+        td= tag.attributes["tagging_count"]
