@@ -7,5 +7,6 @@ class Tag
 
   timestamps
 
-  has_many posts : Post, through: PostTag
+  has_many post_tags : PostTag, foreign_key: "post_id"
+  has_many posts : Post, through: :post_tags, relation: :posts
 end

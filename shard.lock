@@ -9,8 +9,8 @@ shards:
     version: 1.2.1
 
   clear:
-    git: https://github.com/mamantoha/clear.git
-    version: 0.8.2+git.commit.253984bc498f8a047a86c4708173d6c2f48c8e28
+    git: https://github.com/anykeyh/clear.git
+    version: 0.9+git.commit.3178c7f8bc1516dd766683efb3b0132578ae81e1
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git

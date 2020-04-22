@@ -27,6 +27,8 @@ Clear.seed do
     kind:    "test",
   })
 
+  # FIXME:
+  # Unhandled exception: Operation not permitted on this collection. (Exception)
   p1.dependencies << p2
   p1.dependencies << p4
 

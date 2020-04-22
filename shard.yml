@@ -9,10 +9,8 @@ dependencies:
     github: kemalcr/kemal
     branch: master
   clear:
-    # github: anykeyh/clear
-    # branch: master
-    github: mamantoha/clear
-    branch: develop
+    github: anykeyh/clear
+    branch: v0.9
   slang:
     github: jeromegn/slang
     branch: master

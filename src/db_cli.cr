@@ -2,4 +2,4 @@ require "clear/cli"
 
 require "../config/config"
 
-Clear::CLI.run
+Clear::CLI.run(false)
