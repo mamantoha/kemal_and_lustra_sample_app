@@ -27,18 +27,26 @@ Clear.seed do
     kind:    "test",
   })
 
-  # FIXME:
-  # Unhandled exception: Operation not permitted on this collection. (Exception)
-  p1.dependencies << p2
-  p1.dependencies << p4
-
   t1 = Tag.query.find_or_create({name: "ruby"}) { }
   t2 = Tag.query.find_or_create({name: "crystal"}) { }
 
-  p1.tags << t1
-  p2.tags << t2
-  p3.tags << t1
-  p3.tags << t2
+  # FIXME:
+  # Unhandled exception: Operation not permitted on this collection. (Exception)
+  #
+
+  # p1.dependencies << p2
+  # p1.dependencies << p4
+  Relationship.create!({leader: p1, follower: p2})
+  Relationship.create!({leader: p1, follower: p4})
+
+  # p1.tags << t1
+  # p2.tags << t2
+  # p3.tags << t1
+  # p3.tags << t2
+  PostTag.create({post: p1, tag: t1})
+  PostTag.create({post: p2, tag: t2})
+  PostTag.create({post: p3, tag: t1})
+  PostTag.create({post: p3, tag: t2})
 
   Post.query.each(&.touch)
 end

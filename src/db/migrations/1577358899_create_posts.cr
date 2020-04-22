@@ -28,14 +28,14 @@ class CreatePosts
         t.timestamps
       end
 
-      create_table(:post_tags, id: false) do |t|
+      create_table(:post_tags) do |t|
         t.references to: "tags", name: "tag_id", on_delete: "cascade", null: false, primary: true
         t.references to: "posts", name: "post_id", on_delete: "cascade", null: false, primary: true
 
         t.index ["tag_id", "post_id"], using: :btree, unique: true
       end
 
-      create_table(:relationships, id: false) do |t|
+      create_table(:relationships) do |t|
         t.references to: "posts", name: "leader_id", on_delete: "cascade", null: false, primary: true
         t.references to: "posts", name: "follower_id", on_delete: "cascade", null: false, primary: true
 
