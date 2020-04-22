@@ -16,10 +16,9 @@ class Post
   has_many post_tags : PostTag, foreign_key: "post_id"
   has_many tags : Tag, through: :post_tags, relation: :tag
 
-  has_many leaders : Relationship, foreign_key: "leader_id"
-  has_many followers : Relationship, foreign_key: "follower_id"
-  has_many dependencies : Post, through: :leaders, relation: :leader
-  has_many dependents : Post, through: :followers, relation: :follower
+  has_many relationships : Relationship
+  has_many dependencies : Post, through: :relationships, relation: :leader
+  has_many dependents : Post, through: :relationships, relation: :follower
 
   def tags=(names : Array(String))
     names.map do |name|
