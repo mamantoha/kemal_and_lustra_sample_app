@@ -5,6 +5,7 @@ class Post
 
   column title : String
   column content : String
+  column kind : String
 
   timestamps
 

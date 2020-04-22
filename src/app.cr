@@ -21,7 +21,7 @@ get "/" do |env|
     .order_by(tagging_count: :desc)
     .select(
       "tags.*",
-      "COUNT(repository_tags.*) AS tagging_count"
+      "COUNT(post_tags.*) AS tagging_count"
     )
 
   render "src/views/index.slang"

@@ -2,19 +2,19 @@ version: 1.0
 shards:
   admiral:
     github: jwaldrip/admiral.cr
-    commit: d11fc4863154f3dbd933421bdf45d356a2550e07
+    commit: 09a81513a47535c4b59cbf0ab98cadcbf6ab70fb
 
   clear:
-    path: ../clear
-    version: 0.7.2
+    github: anykeyh/clear
+    commit: f9aa2369a665f413ea27a8000e8884c778f28d36
 
   db:
     github: crystal-lang/crystal-db
-    version: 0.8.0
+    version: 0.9.0
 
   exception_page:
     github: crystal-loot/exception_page
-    version: 0.1.2
+    version: 0.1.4
 
   generate:
     github: anykeyh/generate.cr
@@ -34,7 +34,7 @@ shards:
 
   pg:
     github: will/crystal-pg
-    commit: cafebf8ae9477e7e50bd3e1281d66d8a519d645f
+    commit: cafee448dc09ef487bd3941febce8796830f1bd7
 
   radix:
     github: luislavena/radix
