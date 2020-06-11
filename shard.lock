@@ -1,46 +1,46 @@
-version: 1.0
+version: 2.0
 shards:
   admiral:
-    github: jwaldrip/admiral.cr
-    commit: 09a81513a47535c4b59cbf0ab98cadcbf6ab70fb
+    git: https://github.com/jwaldrip/admiral.cr.git
+    version: 1.11.2+git.commit.c3c3467953654554b72c24e7b853d6fbb23f10c0
 
   clear:
-    github: anykeyh/clear
-    commit: f9aa2369a665f413ea27a8000e8884c778f28d36
+    git: https://github.com/anykeyh/clear.git
+    version: 0.8+git.commit.f9aa2369a665f413ea27a8000e8884c778f28d36
 
   db:
-    github: crystal-lang/crystal-db
+    git: https://github.com/crystal-lang/crystal-db.git
     version: 0.9.0
 
   exception_page:
-    github: crystal-loot/exception_page
+    git: https://github.com/crystal-loot/exception_page.git
     version: 0.1.4
 
   generate:
-    github: anykeyh/generate.cr
-    commit: 27a59d663ded8ce39a361e3a88b8dd747f59ce42
+    git: https://github.com/anykeyh/generate.cr.git
+    version: 0.1.0+git.commit.27a59d663ded8ce39a361e3a88b8dd747f59ce42
 
   inflector:
-    github: phoffer/inflector.cr
+    git: https://github.com/phoffer/inflector.cr.git
     version: 0.1.8
 
   kemal:
-    github: kemalcr/kemal
-    version: 0.26.1
+    git: https://github.com/kemalcr/kemal.git
+    version: 0.26.1+git.commit.a8c0f09b858162bd13c96663febef5527b322a32
 
   kilt:
-    github: jeromegn/kilt
+    git: https://github.com/jeromegn/kilt.git
     version: 0.4.0
 
   pg:
-    github: will/crystal-pg
-    commit: cafee448dc09ef487bd3941febce8796830f1bd7
+    git: https://github.com/will/crystal-pg.git
+    version: 0.21.1+git.commit.cafe111fc28e366c219144d5f656c3718d7357dd
 
   radix:
-    github: luislavena/radix
+    git: https://github.com/luislavena/radix.git
     version: 0.3.9
 
   slang:
-    github: jeromegn/slang
-    commit: 8210d3f83c6199bc59925ee964405ffe926f44f3
+    git: https://github.com/jeromegn/slang.git
+    version: 1.7.1+git.commit.8206914a74832e3ae71490ec4fa60c50e967c9ee
 

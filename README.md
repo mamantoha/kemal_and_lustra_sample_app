@@ -10,8 +10,8 @@ A `post` has self-referential association to define leaders/followers.
 ## Development
 
 ```bash
-crystal src/db_cli.cr -- migrate
-crystal src/db_cli.cr -- migrate seed
+crystal src/db_cli.cr migrate
+crystal src/db_cli.cr migrate seed
 ```
 
 ```bash
