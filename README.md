@@ -21,6 +21,8 @@ crystal src/app.cr
 
 Open <http://localhost:3000/?query=poney%20crystal>
 
+![web page](https://raw.githubusercontent.com/mamantoha/kemal_and_clear_sample_app/master/app.png)
+
 ## Contributing
 
 1. Fork it (<https://github.com/mamantoha/kemal_and_clear_sample_app/fork>)
