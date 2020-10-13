@@ -5,12 +5,12 @@ shards:
     version: 1.11.2+git.commit.c3c3467953654554b72c24e7b853d6fbb23f10c0
 
   clear:
-    git: https://github.com/anykeyh/clear.git
-    version: 0.8+git.commit.f9aa2369a665f413ea27a8000e8884c778f28d36
+    git: https://github.com/mamantoha/clear.git
+    version: 0.8+git.commit.6d188fc02a378fbb9ca1cf50dbaf29f4bdcf36fb
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.9.0
+    version: 0.10.0
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
@@ -26,7 +26,7 @@ shards:
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 0.26.1+git.commit.a8c0f09b858162bd13c96663febef5527b322a32
+    version: 0.26.1+git.commit.a819d4792bbc63d993d6dd2b15f9af5efb0c2d8c
 
   kilt:
     git: https://github.com/jeromegn/kilt.git
@@ -34,7 +34,7 @@ shards:
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.21.1+git.commit.cafe111fc28e366c219144d5f656c3718d7357dd
+    version: 0.22.1+git.commit.cafeaf6127d8d50cfc345ae987f63e8d39fd9041
 
   radix:
     git: https://github.com/luislavena/radix.git
@@ -42,5 +42,5 @@ shards:
 
   slang:
     git: https://github.com/jeromegn/slang.git
-    version: 1.7.1+git.commit.8206914a74832e3ae71490ec4fa60c50e967c9ee
+    version: 1.7.1+git.commit.22bfe847286647f98af008b284c5c0438d67677a
 

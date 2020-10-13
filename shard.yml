@@ -9,8 +9,10 @@ dependencies:
     github: kemalcr/kemal
     branch: master
   clear:
-    github: anykeyh/clear
-    branch: master
+    # github: anykeyh/clear
+    # branch: master
+    github: mamantoha/clear
+    branch: develop
   slang:
     github: jeromegn/slang
     branch: master
@@ -22,6 +24,6 @@ targets:
     main: src/db_cli.cr
 
 
-crystal: 0.34.0
+crystal: 0.35.1
 
 license: MIT
