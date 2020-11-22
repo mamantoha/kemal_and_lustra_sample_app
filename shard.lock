@@ -6,7 +6,7 @@ shards:
 
   clear:
     git: https://github.com/mamantoha/clear.git
-    version: 0.8+git.commit.6d188fc02a378fbb9ca1cf50dbaf29f4bdcf36fb
+    version: 0.8+git.commit.e757063e38140b7a74dda942c5b0e5371d7810a4
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
