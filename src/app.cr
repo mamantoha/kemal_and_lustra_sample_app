@@ -27,4 +27,28 @@ get "/" do |env|
   render "src/views/index.slang"
 end
 
+get "/tags/:name" do |env|
+  name = env.params.url["name"]
+
+  if tag = Tag.query.find({name: name})
+    posts = tag.posts.with_tags.with_author
+
+    render "src/views/tags.slang"
+  else
+    raise Kemal::Exceptions::RouteNotFound.new(env)
+  end
+end
+
+get "/authors/:id" do |env|
+  author_id = env.params.url["id"].to_i
+
+  if author = Author.find(author_id)
+    posts = author.posts.with_tags.with_author
+
+    render "src/views/author.slang"
+  else
+    raise Kemal::Exceptions::RouteNotFound.new(env)
+  end
+end
+
 Kemal.run
