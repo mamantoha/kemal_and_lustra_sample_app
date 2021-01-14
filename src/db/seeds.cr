@@ -27,8 +27,8 @@ Clear.seed do
     kind:    "test",
   })
 
-  t1 = Tag.query.find_or_create({name: "ruby"}) { }
-  t2 = Tag.query.find_or_create({name: "crystal"}) { }
+  t1 = Tag.query.find_or_create(name: "ruby") { }
+  t2 = Tag.query.find_or_create(name: "crystal") { }
 
   # FIXME:
   # Unhandled exception: Operation not permitted on this collection. (Exception)
