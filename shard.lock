@@ -10,11 +10,7 @@ shards:
 
   clear:
     git: https://github.com/anykeyh/clear.git
-<<<<<<< HEAD
     version: 0.9+git.commit.3178c7f8bc1516dd766683efb3b0132578ae81e1
-=======
-    version: 0.9+git.commit.cac0806df13caedff7a70d3d98a1d24ce95432ee
->>>>>>> update shards
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
