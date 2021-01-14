@@ -2,7 +2,7 @@ version: 2.0
 shards:
   admiral:
     git: https://github.com/jwaldrip/admiral.cr.git
-    version: 1.11.4+git.commit.50a01f29ffe2b921fe4d2a4dbbc135bf551a4742
+    version: 1.11.4
 
   backtracer:
     git: https://github.com/sija/backtracer.cr.git
@@ -10,7 +10,7 @@ shards:
 
   clear:
     git: https://github.com/anykeyh/clear.git
-    version: 0.9+git.commit.3178c7f8bc1516dd766683efb3b0132578ae81e1
+    version: 0.9+git.commit.775e877c4f961da01fa621ae7ca302cb735198df
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
@@ -25,8 +25,8 @@ shards:
     version: 0.1.0+git.commit.f5dafc934a70e0ee2f246dddf3df44686f844da2
 
   inflector:
-    git: https://github.com/phoffer/inflector.cr.git
-    version: 0.1.8
+    git: https://github.com/anykeyh/inflector.cr.git
+    version: 0.1.8+git.commit.dc5c898b0a834617d8b3ff73ac5a2239bd9fc019
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
@@ -38,7 +38,7 @@ shards:
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.23.2+git.commit.cafe1e2a48764464299b44ab26449eb503be5934
+    version: 0.23.2
 
   radix:
     git: https://github.com/luislavena/radix.git
