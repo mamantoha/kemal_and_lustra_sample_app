@@ -17,5 +17,6 @@ table
         td
           - post.tags.to_a.each do |tag|
             a href="/tags/#{tag.name}" = tag.name
-        td= post.dependencies.map(&.title).join(", ")
-        td= post.dependents.map(&.title).join(", ")
+        / FIXME: table name "posts" specified more than once
+        / td= post.dependencies.map(&.title).join(", ")
+        / td= post.dependents.map(&.title).join(", ")
