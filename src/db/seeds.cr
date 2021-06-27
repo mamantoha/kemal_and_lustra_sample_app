@@ -30,11 +30,10 @@ Clear.seed do
   t1 = Tag.query.find_or_create(name: "ruby") { }
   t2 = Tag.query.find_or_create(name: "crystal") { }
 
-  # FIXME:
-  # Unhandled exception: Operation not permitted on this collection. (Exception)
+  # FIXME: Unhandled exception: Operation not permitted on this collection. (Exception)
   #
-  p1.dependencies << p2
-  p1.dependencies << p4
+  # p1.dependencies << p2
+  # p1.dependencies << p4
 
   Relationship.create!({leader: p1, follower: p2})
   Relationship.create!({leader: p1, follower: p4})
