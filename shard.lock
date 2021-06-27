@@ -2,23 +2,27 @@ version: 2.0
 shards:
   admiral:
     git: https://github.com/jwaldrip/admiral.cr.git
-    version: 1.11.2+git.commit.c3c3467953654554b72c24e7b853d6fbb23f10c0
+    version: 1.11.4+git.commit.50a01f29ffe2b921fe4d2a4dbbc135bf551a4742
+
+  backtracer:
+    git: https://github.com/sija/backtracer.cr.git
+    version: 1.2.1
 
   clear:
     git: https://github.com/mamantoha/clear.git
-    version: 0.8+git.commit.e757063e38140b7a74dda942c5b0e5371d7810a4
+    version: 0.8.2+git.commit.253984bc498f8a047a86c4708173d6c2f48c8e28
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.10.0
+    version: 0.10.1
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
-    version: 0.1.4
+    version: 0.2.0
 
   generate:
     git: https://github.com/anykeyh/generate.cr.git
-    version: 0.1.0+git.commit.27a59d663ded8ce39a361e3a88b8dd747f59ce42
+    version: 0.1.0+git.commit.f5dafc934a70e0ee2f246dddf3df44686f844da2
 
   inflector:
     git: https://github.com/phoffer/inflector.cr.git
@@ -26,21 +30,21 @@ shards:
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 0.26.1+git.commit.a819d4792bbc63d993d6dd2b15f9af5efb0c2d8c
+    version: 1.0.0+git.commit.218be2422172d330feb62c6a8abc7df5402fdb84
 
   kilt:
     git: https://github.com/jeromegn/kilt.git
-    version: 0.4.0
+    version: 0.6.1
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.22.1+git.commit.cafeaf6127d8d50cfc345ae987f63e8d39fd9041
+    version: 0.23.2+git.commit.cafe1e2a48764464299b44ab26449eb503be5934
 
   radix:
     git: https://github.com/luislavena/radix.git
-    version: 0.3.9
+    version: 0.4.1
 
   slang:
     git: https://github.com/jeromegn/slang.git
-    version: 1.7.1+git.commit.22bfe847286647f98af008b284c5c0438d67677a
+    version: 1.7.3+git.commit.901df64c9a1c1df91d3acd00762509c9b6d3cfd8
 
