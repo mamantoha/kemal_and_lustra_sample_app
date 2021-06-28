@@ -10,6 +10,7 @@ A `post` has self-referential association to define leaders/followers.
 ## Development
 
 ```bash
+psql -c 'DROP DATABASE IF EXISTS kemal_and_clear_sample_app;' -U postgres
 psql -c 'CREATE DATABASE kemal_and_clear_sample_app;' -U postgres
 crystal src/db_cli.cr migrate
 crystal src/db_cli.cr migrate seed
