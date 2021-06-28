@@ -35,8 +35,8 @@ Clear.seed do
   # p1.dependencies << p2
   # p1.dependencies << p4
 
-  Relationship.create!({leader: p1, follower: p2})
-  Relationship.create!({leader: p1, follower: p4})
+  # Relationship.create!({leader: p1, follower: p2})
+  # Relationship.create!({leader: p1, follower: p4})
 
   # p1.tags << t1
   # p2.tags << t2

@@ -16,9 +16,21 @@ class Post
   has_many post_tags : PostTag, foreign_key: "post_id"
   has_many tags : Tag, through: :post_tags, relation: :tag
 
-  has_many relationships : Relationship
-  has_many dependencies : Post, through: :relationships, relation: :leader
-  has_many dependents : Post, through: :relationships, relation: :follower
+  has_many relationships_dependencies : Relationship, foreign_key: "leader_id"
+  has_many dependencies : Post, through: :relationships_dependencies, relation: :leader
+
+  has_many relationships_dependents : Relationship, foreign_key: "follower_id"
+  has_many dependents : Post, through: :relationships_dependents, relation: :follower
+
+  # has_many relationships : Relationship
+  # has_many dependencies : Post, through: :relationships, relation: :leader
+  # has_many dependents : Post, through: :relationships, relation: :follower
+
+  # Dependencies
+  # SELECT DISTINCT posts.* FROM "posts" INNER JOIN relationships ON ("relationships"."follower_id" = "posts"."id") WHERE ("relationships"."leader_id" = 5);
+
+  # Dependents / Used by
+  # SELECT DISTINCT posts.* FROM "posts" INNER JOIN relationships ON ("relationships"."leader_id" = "posts"."id") WHERE ("relationships"."follower_id" = 6);
 
   def tags=(names : Array(String))
     names.map do |name|
