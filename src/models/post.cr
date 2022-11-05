@@ -20,7 +20,7 @@ class Post
 
   def tags=(names : Array(String))
     names.map do |name|
-      tag = Tag.query.find_or_create(name: name) { }
+      tag = Tag.query.find_or_create(name: name)
       self.tags << tag
     end
 

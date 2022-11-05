@@ -30,8 +30,8 @@ Clear.seed do
   p1.dependencies << p2
   p1.dependencies << p4
 
-  t1 = Tag.query.find_or_create(name: "ruby") { }
-  t2 = Tag.query.find_or_create(name: "crystal") { }
+  t1 = Tag.query.find_or_create(name: "ruby")
+  t2 = Tag.query.find_or_create(name: "crystal")
 
   p1.tags << t1
   p2.tags << t2
