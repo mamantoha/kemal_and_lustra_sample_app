@@ -11,8 +11,10 @@ dependencies:
   clear:
     # github: anykeyh/clear
     # branch: master
-    github: mamantoha/clear
-    branch: develop
+    github: crystal-garage/clear
+    branch: refactor
+  kilt:
+    github: jeromegn/kilt
   slang:
     github: jeromegn/slang
     branch: master
@@ -24,6 +26,6 @@ targets:
     main: src/db_cli.cr
 
 
-crystal: 1.0.0
+crystal: 1.6.0
 
 license: MIT
