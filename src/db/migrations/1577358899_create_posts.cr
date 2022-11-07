@@ -1,7 +1,7 @@
 class CreatePosts
   include Clear::Migration
 
-  def change(direction)
+  def change(dir)
     direction.up do
       create_table(:authors) do |t|
         t.column :name, :string, index: true

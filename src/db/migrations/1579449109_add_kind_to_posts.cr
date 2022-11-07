@@ -1,7 +1,7 @@
 class AddKindToPosts
   include Clear::Migration
 
-  def change(direction)
+  def change(dir)
     direction.up do
       add_column "posts", "kind", "text"
     end

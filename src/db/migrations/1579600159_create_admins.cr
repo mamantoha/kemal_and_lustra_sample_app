@@ -1,7 +1,7 @@
 class CreateAdmins
   include Clear::Migration
 
-  def change(direction)
+  def change(dir)
     direction.up do
       create_table(:admins) do |t|
         t.column :name, :string, index: true
