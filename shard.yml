@@ -12,7 +12,7 @@ dependencies:
     # github: anykeyh/clear
     # branch: master
     github: crystal-garage/clear
-    branch: refactor
+    branch: develop
   kilt:
     github: jeromegn/kilt
   slang:

@@ -2,7 +2,7 @@ class CreateAdmins
   include Clear::Migration
 
   def change(dir)
-    direction.up do
+    dir.up do
       create_table(:admins) do |t|
         t.column :name, :string, index: true
 
@@ -10,7 +10,7 @@ class CreateAdmins
       end
     end
 
-    direction.down do
+    dir.down do
       execute("DROP TABLE admins")
     end
   end

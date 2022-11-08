@@ -2,7 +2,7 @@ class CreatePosts
   include Clear::Migration
 
   def change(dir)
-    direction.up do
+    dir.up do
       create_table(:authors) do |t|
         t.column :name, :string, index: true
 
@@ -93,7 +93,7 @@ class CreatePosts
       SQL
     end
 
-    direction.down do
+    dir.down do
       execute("DROP TABLE authors")
       execute("DROP TABLE posts")
       execute("DROP TABLE tags")
