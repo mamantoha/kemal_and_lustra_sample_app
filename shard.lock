@@ -10,7 +10,7 @@ shards:
 
   clear:
     git: https://github.com/crystal-garage/clear.git
-    version: 0.8.11+git.commit.c6e7381a3b982f51b00f02384732853c21de3003
+    version: 0.8.13+git.commit.a0984105adacc22204a88d628b45677e43519f33
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
