@@ -35,11 +35,4 @@ class Post
   def tag_names
     self.tags.map(&.name)
   end
-
-  def touch
-    now = Time.local
-
-    self.updated_at = Time.local
-    self.save
-  end
 end
