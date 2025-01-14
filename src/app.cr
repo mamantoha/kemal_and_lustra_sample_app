@@ -1,5 +1,6 @@
 require "kemal"
-require "./ext/kemal"
+require "kemal-kilt"
+require "kilt/slang"
 require "../config/config"
 
 get "/" do |env|

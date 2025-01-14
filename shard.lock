@@ -18,7 +18,7 @@ shards:
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
-    version: 0.5.0
+    version: 0.4.1
 
   generate:
     git: https://github.com/anykeyh/generate.cr.git
@@ -30,7 +30,11 @@ shards:
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 1.6.0+git.commit.5359781a64a4baaa93064cfd919ca8d82ff3a9fe
+    version: 1.6.0
+
+  kemal-kilt:
+    git: https://github.com/crystal-garage/kemal-kilt.git
+    version: 0.1.1
 
   kilt:
     git: https://github.com/jeromegn/kilt.git
