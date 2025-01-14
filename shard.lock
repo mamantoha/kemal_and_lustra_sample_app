@@ -10,15 +10,15 @@ shards:
 
   clear:
     git: https://github.com/crystal-garage/clear.git
-    version: 0.8.13+git.commit.a0984105adacc22204a88d628b45677e43519f33
+    version: 0.8.21+git.commit.5554e119f7b706474520fed374a1a707a42ac6dd
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
-    version: 0.11.0
+    version: 0.13.1
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
-    version: 0.3.0
+    version: 0.5.0
 
   generate:
     git: https://github.com/anykeyh/generate.cr.git
@@ -30,7 +30,7 @@ shards:
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 1.3.0+git.commit.ae7cda829162ea27668b3fc79cd1868026e25098
+    version: 1.6.0+git.commit.5359781a64a4baaa93064cfd919ca8d82ff3a9fe
 
   kilt:
     git: https://github.com/jeromegn/kilt.git
@@ -38,7 +38,7 @@ shards:
 
   pg:
     git: https://github.com/will/crystal-pg.git
-    version: 0.26.0
+    version: 0.29.0
 
   radix:
     git: https://github.com/luislavena/radix.git
@@ -46,5 +46,5 @@ shards:
 
   slang:
     git: https://github.com/jeromegn/slang.git
-    version: 1.7.3+git.commit.901df64c9a1c1df91d3acd00762509c9b6d3cfd8
+    version: 1.7.3+git.commit.f038a6c9725065ffd9b035f9c402390a2150d519
 

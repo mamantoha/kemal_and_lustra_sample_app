@@ -25,7 +25,6 @@ targets:
   db_cli:
     main: src/db_cli.cr
 
-
-crystal: 1.6.0
+crystal: 1.15.0
 
 license: MIT
