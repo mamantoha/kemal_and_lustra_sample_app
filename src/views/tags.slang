@@ -1,5 +1,5 @@
 h1
-  | Kemal and Clear Sample Application
+  | Kemal and Lustra ORM Sample Application
 
 h2 #{posts.count} posts with tag "#{tag.name}"
 

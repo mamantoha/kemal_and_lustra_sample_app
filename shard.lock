@@ -6,11 +6,7 @@ shards:
 
   backtracer:
     git: https://github.com/sija/backtracer.cr.git
-    version: 1.2.2
-
-  clear:
-    git: https://github.com/crystal-garage/clear.git
-    version: 0.8.21+git.commit.5554e119f7b706474520fed374a1a707a42ac6dd
+    version: 1.2.4
 
   db:
     git: https://github.com/crystal-lang/crystal-db.git
@@ -18,7 +14,7 @@ shards:
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
-    version: 0.4.1
+    version: 0.5.0
 
   generate:
     git: https://github.com/anykeyh/generate.cr.git
@@ -30,7 +26,7 @@ shards:
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 1.6.0
+    version: 1.7.3
 
   kemal-kilt:
     git: https://github.com/crystal-garage/kemal-kilt.git
@@ -39,6 +35,10 @@ shards:
   kilt:
     git: https://github.com/jeromegn/kilt.git
     version: 0.6.1
+
+  lustra:
+    git: https://github.com/crystal-garage/lustra.git
+    version: 0.9.0+git.commit.bad865ea77537fc532b7482ec9e5242a054efa13
 
   pg:
     git: https://github.com/will/crystal-pg.git

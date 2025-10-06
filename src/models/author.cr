@@ -1,5 +1,5 @@
 class Author
-  include Clear::Model
+  include Lustra::Model
 
   primary_key
 

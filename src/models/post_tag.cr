@@ -1,5 +1,5 @@
 class PostTag
-  include Clear::Model
+  include Lustra::Model
 
   belongs_to post : Post
   belongs_to tag : Tag

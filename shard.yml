@@ -1,4 +1,4 @@
-name: kemal_and_clear_sample_app
+name: kemal_and_lsutra_sample_app
 version: 0.1.0
 
 authors:
@@ -7,10 +7,8 @@ authors:
 dependencies:
   kemal:
     github: kemalcr/kemal
-  clear:
-    # github: anykeyh/clear
-    # branch: master
-    github: crystal-garage/clear
+  lustra:
+    github: crystal-garage/lustra
     branch: develop
   kilt:
     github: jeromegn/kilt

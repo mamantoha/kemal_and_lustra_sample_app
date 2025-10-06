@@ -1,5 +1,5 @@
-require "clear/cli"
+require "lustra/cli"
 
 require "../config/config"
 
-Clear::CLI.run
+Lustra::CLI.run

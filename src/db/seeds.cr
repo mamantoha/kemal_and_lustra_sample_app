@@ -1,4 +1,4 @@
-Clear.seed do
+Lustra.seed do
   a1 = Author.create!({name: "John"})
   a2 = Author.create!({name: "Jane"})
 
