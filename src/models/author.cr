@@ -4,6 +4,7 @@ class Author
   primary_key
 
   column name : String
+  column posts_count : Int32
 
   timestamps
 
