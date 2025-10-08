@@ -1,6 +1,7 @@
 Lustra.seed do
   a1 = Author.create!({name: "John"})
   a2 = Author.create!({name: "Jane"})
+  a3 = Author.create!({name: "Tom"})
 
   p1 = Post.create!({
     title:   "About poney",

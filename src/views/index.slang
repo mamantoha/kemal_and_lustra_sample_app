@@ -12,11 +12,13 @@ table
     tr
       td Name
       td Posts
+      td Posts count
   tbody
     - authors.each do |author|
       tr
         td= author.name
         td= author.posts.map(&.title).join(", ")
+        td= author.posts_count
 
 h2 #{taggings.count} tags
 

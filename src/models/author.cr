@@ -4,7 +4,7 @@ class Author
   primary_key
 
   column name : String
-  column posts_count : Int32
+  column posts_count : Int32, presence: false
 
   timestamps
 
