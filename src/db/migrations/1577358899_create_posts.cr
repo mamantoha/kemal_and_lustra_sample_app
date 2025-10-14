@@ -5,7 +5,6 @@ class CreatePosts
     dir.up do
       create_table(:authors) do |t|
         t.column :name, :string, index: true
-        t.column :posts_count, :integer, null: false, default: 0
 
         t.timestamps
       end
