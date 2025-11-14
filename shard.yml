@@ -9,7 +9,7 @@ dependencies:
     github: kemalcr/kemal
   lustra:
     github: crystal-garage/lustra
-    branch: develop
+    branch: main
   kilt:
     github: jeromegn/kilt
   slang:
