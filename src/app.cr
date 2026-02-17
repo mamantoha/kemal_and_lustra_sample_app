@@ -15,15 +15,16 @@ get "/" do |env|
 
   authors = Author.query
 
-  taggings = Tag
-    .query
-    .join("post_tags") { post_tags.tag_id == tags.id }
-    .group_by("tags.id")
-    .order_by(tagging_count: :desc)
-    .select(
-      "tags.*",
-      "COUNT(post_tags.*) AS tagging_count"
-    )
+  taggings =
+    Tag
+      .query
+      .join(:post_tags)
+      .group_by("tags.id")
+      .select(
+        "tags.*",
+        "COUNT(post_tags.*) AS tagging_count"
+      )
+      .order_by(tagging_count: :desc)
 
   render "src/views/index.slang"
 end
@@ -31,7 +32,7 @@ end
 get "/tags/:name" do |env|
   name = env.params.url["name"]
 
-  if tag = Tag.query.find({name: name})
+  if tag = Tag.find_by(name: name)
     posts = tag.posts.with_tags.with_author
 
     render "src/views/tags.slang"

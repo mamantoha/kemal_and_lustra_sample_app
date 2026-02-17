@@ -7,5 +7,6 @@ class Tag
 
   timestamps
 
+  has_many post_tags : PostTag
   has_many posts : Post, through: PostTag
 end
