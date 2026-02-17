@@ -4,7 +4,7 @@ class Post
   primary_key
 
   column title : String
-  column content : String
+  column content : String?
   column kind : String
 
   timestamps

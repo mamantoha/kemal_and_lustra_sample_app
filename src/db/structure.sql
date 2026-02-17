@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict pEJFT1w4f1sOHPceS3nvgwcTX4X2DubDciRNTNpeACGWqM3mpL2auy98ArR0Mzi
+\restrict xFDrKAkffVn9jMKmNFacerp83tkYnGx4oQfTIboiOC0VCLrztiluwHVoPuDjmZA
 
 -- Dumped from database version 18.1
 -- Dumped by pg_dump version 18.2
@@ -120,7 +120,7 @@ ALTER SEQUENCE public.admins_id_seq OWNED BY public.admins.id;
 
 CREATE TABLE public.authors (
     id bigint NOT NULL,
-    name text,
+    name text NOT NULL,
     created_at timestamp without time zone DEFAULT now() NOT NULL,
     updated_at timestamp without time zone DEFAULT now() NOT NULL,
     posts_count integer DEFAULT 0 NOT NULL
@@ -168,7 +168,7 @@ ALTER TABLE public.post_tags OWNER TO postgres;
 
 CREATE TABLE public.posts (
     id bigint NOT NULL,
-    title text,
+    title text NOT NULL,
     content text,
     tsv tsvector,
     author_id bigint NOT NULL,
@@ -302,9 +302,9 @@ COPY public.admins (id, name, created_at, updated_at) FROM stdin;
 --
 
 COPY public.authors (id, name, created_at, updated_at, posts_count) FROM stdin;
-3	Tom	2026-02-17 11:17:16.187	2026-02-17 11:17:16.187	0
-1	John	2026-02-17 11:17:16.175	2026-02-17 11:17:16.175	2
-2	Jane	2026-02-17 11:17:16.186	2026-02-17 11:17:16.186	2
+3	Tom	2026-02-17 11:49:10.335	2026-02-17 11:49:10.335	0
+1	John	2026-02-17 11:49:10.333	2026-02-17 11:49:10.333	2
+2	Jane	2026-02-17 11:49:10.334	2026-02-17 11:49:10.334	2
 \.
 
 
@@ -325,10 +325,10 @@ COPY public.post_tags (tag_id, post_id) FROM stdin;
 --
 
 COPY public.posts (id, title, content, tsv, author_id, created_at, updated_at, kind) FROM stdin;
-1	About poney	Poney are cool	'about':1A 'are':4B 'cool':5B 'john':6C 'poney':2A,3B 'ruby':7B	1	2026-02-17 11:17:16.188	2026-02-17 11:17:16.222	test
-2	About dog and cat	Cat and dog are cool. But not as much as poney	'about':1A 'and':3A,6B 'are':8B 'as':12B,14B 'but':10B 'cat':4A,5B 'cool':9B 'crystal':17B 'dog':2A,7B 'john':16C 'much':13B 'not':11B 'poney':15B	1	2026-02-17 11:17:16.199	2026-02-17 11:17:16.224	test
-3	You won't believe: She raises her poney like as star!	She's col because poney are cool	'are':17B 'as':10A 'because':15B 'believe':4A 'col':14B 'cool':18B 'crystal':21B 'her':7A 'jane':19C 'like':9A 'poney':8A,16B 'raises':6A 'ruby':20B 's':13B 'she':5A,12B 'star':11A 't':3A 'won':2A 'you':1A	2	2026-02-17 11:17:16.202	2026-02-17 11:17:16.226	test
-4	Post without tags	Test posts without tags	'jane':8C 'post':1A 'posts':5B 'tags':3A,7B 'test':4B 'without':2A,6B	2	2026-02-17 11:17:16.204	2026-02-17 11:17:16.227	test
+1	About poney	Poney are cool	'about':1A 'are':4B 'cool':5B 'john':6C 'poney':2A,3B 'ruby':7B	1	2026-02-17 11:49:10.335	2026-02-17 11:49:10.346	test
+2	About dog and cat	Cat and dog are cool. But not as much as poney	'about':1A 'and':3A,6B 'are':8B 'as':12B,14B 'but':10B 'cat':4A,5B 'cool':9B 'crystal':17B 'dog':2A,7B 'john':16C 'much':13B 'not':11B 'poney':15B	1	2026-02-17 11:49:10.337	2026-02-17 11:49:10.347	test
+3	You won't believe: She raises her poney like as star!	She's col because poney are cool	'are':17B 'as':10A 'because':15B 'believe':4A 'col':14B 'cool':18B 'crystal':21B 'her':7A 'jane':19C 'like':9A 'poney':8A,16B 'raises':6A 'ruby':20B 's':13B 'she':5A,12B 'star':11A 't':3A 'won':2A 'you':1A	2	2026-02-17 11:49:10.338	2026-02-17 11:49:10.347	test
+4	Post without tags	Test posts without tags	'jane':8C 'post':1A 'posts':5B 'tags':3A,7B 'test':4B 'without':2A,6B	2	2026-02-17 11:49:10.339	2026-02-17 11:49:10.348	test
 \.
 
 
@@ -347,8 +347,8 @@ COPY public.relationships (leader_id, follower_id) FROM stdin;
 --
 
 COPY public.tags (id, name, created_at, updated_at) FROM stdin;
-1	ruby	2026-02-17 11:17:16.215	2026-02-17 11:17:16.215
-2	crystal	2026-02-17 11:17:16.216	2026-02-17 11:17:16.216
+1	ruby	2026-02-17 11:49:10.341	2026-02-17 11:49:10.341
+2	crystal	2026-02-17 11:49:10.342	2026-02-17 11:49:10.342
 \.
 
 
@@ -451,7 +451,7 @@ CREATE INDEX authors_created_at ON public.authors USING btree (created_at);
 -- Name: authors_name; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE INDEX authors_name ON public.authors USING btree (name);
+CREATE UNIQUE INDEX authors_name ON public.authors USING btree (name);
 
 
 --
@@ -487,13 +487,6 @@ CREATE UNIQUE INDEX post_tags_tag_id_post_id ON public.post_tags USING btree (ta
 --
 
 CREATE INDEX posts_author_id ON public.posts USING btree (author_id);
-
-
---
--- Name: posts_content; Type: INDEX; Schema: public; Owner: postgres
---
-
-CREATE UNIQUE INDEX posts_content ON public.posts USING btree (content);
 
 
 --
@@ -624,5 +617,5 @@ ALTER TABLE ONLY public.relationships
 -- PostgreSQL database dump complete
 --
 
-\unrestrict pEJFT1w4f1sOHPceS3nvgwcTX4X2DubDciRNTNpeACGWqM3mpL2auy98ArR0Mzi
+\unrestrict xFDrKAkffVn9jMKmNFacerp83tkYnGx4oQfTIboiOC0VCLrztiluwHVoPuDjmZA
 

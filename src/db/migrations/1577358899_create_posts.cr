@@ -4,14 +4,14 @@ class CreatePosts
   def change(dir)
     dir.up do
       create_table(:authors) do |t|
-        t.column :name, :string, index: true
+        t.column :name, :string, index: true, unique: true, null: false
 
         t.timestamps
       end
 
       create_table(:posts) do |t|
-        t.column :title, :string, index: true
-        t.column :content, :string, unique: true
+        t.column :title, :string, index: true, null: false
+        t.column :content, :string
 
         t.column :tsv, "tsvector"
 
