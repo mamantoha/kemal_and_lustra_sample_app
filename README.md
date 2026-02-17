@@ -20,6 +20,10 @@ crystal ./src/db_cli.cr migrate seed
 ```
 
 ```bash
+pg_dump kemal_and_lustra_sample_app > src/db/structure.sql
+```
+
+```bash
 crystal ./src/app.cr
 ```
 
