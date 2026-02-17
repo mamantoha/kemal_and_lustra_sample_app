@@ -54,7 +54,7 @@ class CreatePosts
           return new;
         end
         $$ LANGUAGE plpgsql;
-      SQL
+        SQL
 
       execute <<-SQL
         CREATE OR REPLACE FUNCTION tsv_trigger_update_posts() RETURNS trigger AS $$
@@ -73,7 +73,7 @@ class CreatePosts
           return new;
         end
         $$ LANGUAGE plpgsql;
-      SQL
+        SQL
 
       #
       # Creates triggers
@@ -83,14 +83,14 @@ class CreatePosts
           ON posts
           FOR EACH ROW
           EXECUTE PROCEDURE tsv_trigger_update_posts();
-      SQL
+        SQL
 
       execute <<-SQL
         CREATE TRIGGER tsv_insert_posts BEFORE INSERT
           ON posts
           FOR EACH ROW
           EXECUTE PROCEDURE tsv_trigger_insert_posts();
-      SQL
+        SQL
     end
 
     dir.down do
