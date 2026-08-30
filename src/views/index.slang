@@ -33,4 +33,4 @@ table
       tr
         td= tag.name
         td= tag.posts.map(&.title).join(", ")
-        td= tag.attributes["tagging_count"]
+        td= tag.attributes["post_tags_count"]

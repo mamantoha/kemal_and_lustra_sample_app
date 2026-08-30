@@ -6,12 +6,9 @@ require "../config/config"
 get "/" do |env|
   query = env.params.query["query"]?
 
-  posts =
-    if query
-      Post.query.with_tags.with_author.search(query)
-    else
-      Post.query.with_tags.with_author
-    end
+  posts = Post.query.with_tags.with_author
+
+  posts.search(query) if query
 
   authors = Author.query
 
@@ -19,9 +16,8 @@ get "/" do |env|
     Tag
       .query
       .join(:post_tags)
-      .group_by("tags.id")
-      .with_count(:post_tags, alias_name: "tagging_count")
-      .order_by(tagging_count: :desc)
+      .with_count(:post_tags)
+      .order_by(post_tags_count: :desc)
 
   render "src/views/index.slang"
 end
