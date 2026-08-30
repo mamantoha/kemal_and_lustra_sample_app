@@ -15,7 +15,7 @@ table
         td
           a href="/authors/#{post.author.id}" = post.author.name
         td
-          - post.tags.to_a.each do |tag|
+          - post.tags.each do |tag|
             a href="/tags/#{tag.name}" = tag.name
         td= post.dependencies.map(&.title).join(", ")
         td= post.dependents.map(&.title).join(", ")
