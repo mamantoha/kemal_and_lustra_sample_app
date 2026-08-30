@@ -20,10 +20,7 @@ get "/" do |env|
       .query
       .join(:post_tags)
       .group_by("tags.id")
-      .select(
-        "tags.*",
-        "COUNT(post_tags.*) AS tagging_count"
-      )
+      .with_count(:post_tags, alias_name: "tagging_count")
       .order_by(tagging_count: :desc)
 
   render "src/views/index.slang"
