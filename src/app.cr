@@ -10,7 +10,7 @@ get "/" do |env|
 
   posts.search(query) if query
 
-  authors = Author.query
+  authors = Author.query.with_posts
 
   taggings =
     Tag
