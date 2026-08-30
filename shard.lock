@@ -26,7 +26,7 @@ shards:
 
   kemal:
     git: https://github.com/kemalcr/kemal.git
-    version: 1.9.0
+    version: 1.13.0
 
   kemal-kilt:
     git: https://github.com/crystal-garage/kemal-kilt.git
@@ -38,7 +38,7 @@ shards:
 
   lustra:
     git: https://github.com/crystal-garage/lustra.git
-    version: 0.16.2+git.commit.425d5636f546a934292b2039ec59db179db7c95a
+    version: 0.18.3+git.commit.bcdc6f62f004035c996c708814f4dfd352d20810
 
   pg:
     git: https://github.com/will/crystal-pg.git
@@ -50,5 +50,5 @@ shards:
 
   slang:
     git: https://github.com/jeromegn/slang.git
-    version: 1.7.3+git.commit.f038a6c9725065ffd9b035f9c402390a2150d519
+    version: 1.7.3+git.commit.89ae00a2dab421989003c8ccb5c4f3e9394f2ca4
 

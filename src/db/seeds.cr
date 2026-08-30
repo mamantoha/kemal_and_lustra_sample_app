@@ -3,28 +3,27 @@ Lustra.seed do
   a2 = Author.create!({name: "Jane"})
   a3 = Author.create!({name: "Tom"})
 
-  p1 = Post.create!({
+  p1 = a1.posts.create!({
     title:   "About poney",
     content: "Poney are cool",
-    author:  a1,
     kind:    "test",
   })
-  p2 = Post.create!({
+
+  p2 = a1.posts.create!({
     title:   "About dog and cat",
     content: "Cat and dog are cool. But not as much as poney",
-    author:  a1,
     kind:    "test",
   })
-  p3 = Post.create!({
+
+  p3 = a2.posts.create!({
     title:   "You won't believe: She raises her poney like as star!",
     content: "She's col because poney are cool",
-    author:  a2,
     kind:    "test",
   })
-  p4 = Post.create!({
+
+  p4 = a2.posts.create!({
     title:   "Post without tags",
     content: "Test posts without tags",
-    author:  a2,
     kind:    "test",
   })
 
