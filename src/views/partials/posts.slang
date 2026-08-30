@@ -8,7 +8,7 @@ table
       td Dependencies
       td Used by
   tbody
-    - posts.to_a.each do |post|
+    - posts.each do |post|
       tr
         td= post.title
         td= post.content

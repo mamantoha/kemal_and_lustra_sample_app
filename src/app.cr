@@ -6,7 +6,13 @@ require "../config/config"
 get "/" do |env|
   query = env.params.query["query"]?
 
-  posts = Post.query.with_tags.with_author
+  posts =
+    Post
+      .query
+      .with_tags
+      .with_author
+      .with_dependencies
+      .with_dependents
 
   posts.search(query) if query
 
